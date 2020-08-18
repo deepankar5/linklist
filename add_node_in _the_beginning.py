@@ -8,9 +8,11 @@ class LinkList:
         self.head = None
 
     def insert(self, number):
-        temp = Node(number)
-        temp.next = self.head
-        self.head = temp
+        new_node = Node(number)
+        # make the new_node next to head
+        new_node.next = self.head
+        # make the new_node head
+        self.head = new_node
 
 
     def print(self):
