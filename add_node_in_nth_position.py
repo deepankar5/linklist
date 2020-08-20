@@ -10,12 +10,12 @@ class LinkList:
 
     def insert(self, position, value):
         new_node = Node(value)
-        if position == 1:
+        if position == 1:  # if the position is 1st the new_node become the head node
             new_node.next = self.head
             self.head = new_node
             return
         temp = self.head
-        for i in range(position-2):
+        for i in range(position-2):  # traverse to prev_node that
             if temp is None:
                 print('the given position don\'t exit')
                 return
